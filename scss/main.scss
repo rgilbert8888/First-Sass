@@ -1,0 +1,52 @@
+
+//including my partials
+@import 'partials/lists';
+@import 'partials/mixins';
+@import 'partials/colors';
+
+body{
+	background-color: $bground-color;
+	padding: $pad;
+	font-size: $font-size;
+	color: $text-color;
+
+	}
+
+h1{
+	font-size: $font-size * 2;
+	text-align: center;
+	color: $head-color;
+}
+h2{
+	@extend h1;
+	font-size: $font-size;
+}
+nav{
+	border: $border;
+	text-align: center;
+	@include border-radius(10px);
+
+	ul{
+		//trying out some math
+		padding: $pad * 3;
+		li{
+			display: $display;
+			a{
+				text-decoration: $decoration;
+				color: $item-color;
+				padding: $pad * 8;
+			}
+		}
+	}
+}
+
+.content{
+	color: $text-color;
+}
+
+footer{
+//use all of the properties of nav but change font-size
+	@extend nav;
+	font-size: $font-size;
+
+}
