@@ -4,12 +4,14 @@
 @import 'partials/mixins';
 @import 'partials/colors';
 
+$ctr: auto 80px;
+
 body{
 	background-color: $bground-color;
 	padding: $pad;
 	font-size: $font-size;
 	color: $text-color;
-
+	margin: $ctr;
 	}
 
 h1{
@@ -25,6 +27,7 @@ nav{
 	border: $border;
 	text-align: center;
 	@include border-radius(10px);
+	// margin: $ctr;
 
 	ul{
 		//trying out some math
@@ -32,21 +35,22 @@ nav{
 		li{
 			display: $display;
 			a{
-				text-decoration: $decoration;
 				color: $item-color;
+				text-decoration: $decoration;
 				padding: $pad * 8;
+
 			}
 		}
 	}
 }
 
-.content{
-	color: $text-color;
-}
+
+// .content{
+// 	// color: $text-color;
+// }
 
 footer{
 //use all of the properties of nav but change font-size
 	@extend nav;
-	font-size: $font-size;
-
+	background-color: grey;
 }
